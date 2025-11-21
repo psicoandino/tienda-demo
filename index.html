@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Demo | Mini E‑commerce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Tienda<span>Demo</span></div>
+    <nav class="nav">
+      <a href="#productos">Productos</a>
+      <a href="#info">Cómo comprar</a>
+    </nav>
+    <button class="cart-btn" id="cart-toggle">
+      🛒 <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Tu mini tienda online</h1>
+        <p>
+          Este es un ejemplo de sitio web de compras estático. Puedes modificar
+          textos, colores y productos para adaptarlo a tu proyecto real.
+        </p>
+        <button class="primary-btn" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+          Ver productos
+        </button>
+      </div>
+    </section>
+
+    <section id="productos" class="section">
+      <h2>Productos</h2>
+      <p class="section-subtitle">
+        Estos productos están cargados desde JavaScript como ejemplo.
+      </p>
+      <div class="grid" id="product-grid">
+        <!-- Productos generados por JavaScript -->
+      </div>
+    </section>
+
+    <section id="info" class="section section-alt">
+      <h2>Cómo funcionaría una compra real</h2>
+      <ol class="steps">
+        <li>La persona selecciona productos y los agrega al carrito.</li>
+        <li>Haces un botón de “Finalizar compra” que lleve a un formulario (Google Forms, Typeform, etc.) o a WhatsApp.</li>
+        <li>Recibes el pedido y coordinas pago y envío por el canal que prefieras.</li>
+      </ol>
+      <p class="section-note">
+        Este proyecto es solo frontal (HTML, CSS y JS). No tiene pagos reales ni base de datos.
+      </p>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h3>Carrito</h3>
+      <button id="cart-close">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total:</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="primary-btn" id="checkout-btn">Simular compra</button>
+      <p class="cart-hint">
+        En un proyecto real, este botón podría abrir un formulario o un chat de WhatsApp.
+      </p>
+    </div>
+  </aside>
+
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+
+  <footer class="footer">
+    <p>Proyecto mínimo de sitio de compras | Hecho con HTML + CSS + JS puro.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
